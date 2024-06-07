@@ -1,0 +1,22 @@
+<!-- 
+Define the component that will add a shortcut for our program to the start menu
+
+Per https://github.com/wixtoolset/issues/issues/5938 it is ok to suppress
+the ICE69 warning the below Target generates by using ! instead of #
+-->
+
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+	<Fragment>
+		<DirectoryRef Id="ApplicationStartMenuFolder">
+			<Component Id="ApplicationShortcut" Guid="*">
+				<Shortcut Id="ApplicationStartMenuShortcut"
+						  Name="!(bind.Property.ProductName)"
+						  Description="Manage your recycle bin from anywhere"
+						  Target="[!RBMLauncher.exe]"
+						  WorkingDirectory="ApplicationInstallFolder"/>
+				<RemoveFolder Id="RemoveShortcut" Directory="ApplicationStartMenuFolder" On="uninstall"/>
+				<RegistryValue Root="HKCU" Key="Software\!(bind.Property.Manufacturer)\!(bind.Property.ProductName)" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+			</Component>
+		</DirectoryRef>
+	</Fragment>
+</Wix>

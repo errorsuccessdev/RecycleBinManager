@@ -1,0 +1,18 @@
+﻿<Project Sdk="WixToolset.Sdk/5.0.0">
+  <PropertyGroup>
+    <OutputName>RecycleBinManager</OutputName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Cultures>en-US</Cultures>
+    <OutputPath>..\x64\Release</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Cultures />
+    <OutputPath>..\x64\Debug</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RecycleBinManager\RecycleBinManager.vcxproj" />
+  </ItemGroup>
+</Project>

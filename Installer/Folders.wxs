@@ -1,0 +1,19 @@
+<!--
+Define the folders that will be used by our application
+-->
+
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+	<Fragment>
+		<StandardDirectory Id="ProgramFiles6432Folder">
+			<Directory Id="ApplicationInstallFolder" Name="!(bind.Property.Manufacturer)\!(bind.Property.ProductName)" />
+		</StandardDirectory>
+		<StandardDirectory Id="ProgramMenuFolder">
+			<Directory Id="ApplicationStartMenuFolder" Name="!(bind.Property.ProductName)"/>
+		</StandardDirectory>
+		<StandardDirectory Id="LocalAppDataFolder">
+			<Directory Id="ApplicationLocalAppDataVendorFolder" Name="!(bind.Property.Manufacturer)">
+				<Directory Id="ApplicationLocalAppDataProductFolder" Name="!(bind.Property.ProductName)" />
+			</Directory>
+		</StandardDirectory>
+	</Fragment>
+</Wix>

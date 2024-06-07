@@ -1,0 +1,24 @@
+﻿<!-- 
+Installer entry point
+-->
+
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+	<Package Name="Recycle Bin Manager"
+			 Manufacturer="ERROR_SUCCESS Software"
+			 Version="1.0.0.0"
+			 UpgradeCode="b5540a6d-9bb9-478f-8d80-d605b8a7c7ba">
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+
+		<MediaTemplate EmbedCab="yes" />
+
+		<!-- Set a custom icon for our program in Add/Remove Programs and the Settings app -->
+		<Icon Id='ProductIcon' SourceFile='..\..\RBMLauncher\recycle.ico' />
+		<Property Id='ARPPRODUCTICON' Value='ProductIcon' />
+
+		<Feature Id="Main">
+			<ComponentGroupRef Id="ApplicationExecutable" />
+			<ComponentRef Id="ApplicationShortcut" />
+			<ComponentRef Id="ApplicationIniFolder" />
+		</Feature>
+	</Package>
+</Wix>
