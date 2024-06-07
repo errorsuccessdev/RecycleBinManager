@@ -2,7 +2,7 @@
 Recycle Bin Manager is an easy-to-use app that lets you conveniently open and empty the Windows Recycle Bin. 
 
 ## Download
-**Download the latest release [here](TODO)**.
+**Download the latest release [here](https://github.com/errorsuccessdev/RecycleBinManager/releases/latest)**.
 
 Recycle Bin Manager is available both as an MSI installer and a portable app.
 
