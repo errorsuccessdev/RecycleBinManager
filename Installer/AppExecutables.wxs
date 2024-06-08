@@ -3,14 +3,14 @@ Define the components representing our application's executable files
 -->
 
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
-	<Fragment>
-		<ComponentGroup Id="ApplicationExecutable" Directory="ApplicationInstallFolder">
-			<Component>
-				<File Id="RecycleBinManager.exe" Source="RecycleBinManager.exe" />
-			</Component>
-			<Component>
-				<File Id="RBMLauncher.exe" Source="RBMLauncher.exe" />
-			</Component>
-		</ComponentGroup>
-	</Fragment>
+    <Fragment>
+        <ComponentGroup Id="ApplicationExecutable" Directory="ApplicationInstallFolder">
+            <Component>
+                <File Id="RecycleBinManager.exe" Source="RecycleBinManager.exe" />
+            </Component>
+            <Component>
+                <File Id="RBMLauncher.exe" Source="RBMLauncher.exe" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
 </Wix>

@@ -4,15 +4,15 @@ The ini file itself is created by our program at runtime, but we still need a re
 -->
 
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
-	<Fragment>
-		<DirectoryRef Id="ApplicationLocalAppDataProductFolder">
-			<Component Id="ApplicationIniFolder" Guid="*">
-				<CreateFolder />
-				<RemoveFile Id="RemoveIniFile" On="uninstall" Name="settings.ini"/>
-				<RemoveFolder Id="RemoveIniVendorFolder" Directory="ApplicationLocalAppDataVendorFolder" On="uninstall"/>
-				<RemoveFolder Id="RemoveIniProductFolder" Directory="ApplicationLocalAppDataProductFolder" On="uninstall"/>
-				<RegistryValue Root="HKCU" Key="Software\!(bind.Property.Manufacturer)\!(bind.Property.ProductName)" Name="hasappdatafolder" Type="integer" Value="1" KeyPath="yes"/>
-			</Component>
-		</DirectoryRef>
-	</Fragment>
+    <Fragment>
+        <DirectoryRef Id="ApplicationLocalAppDataProductFolder">
+            <Component Id="ApplicationIniFolder" Guid="*">
+                <CreateFolder />
+                <RemoveFile Id="RemoveIniFile" On="uninstall" Name="settings.ini"/>
+                <RemoveFolder Id="RemoveIniVendorFolder" Directory="ApplicationLocalAppDataVendorFolder" On="uninstall"/>
+                <RemoveFolder Id="RemoveIniProductFolder" Directory="ApplicationLocalAppDataProductFolder" On="uninstall"/>
+                <RegistryValue Root="HKCU" Key="Software\!(bind.Property.Manufacturer)\!(bind.Property.ProductName)" Name="hasappdatafolder" Type="integer" Value="1" KeyPath="yes"/>
+            </Component>
+        </DirectoryRef>
+    </Fragment>
 </Wix>
